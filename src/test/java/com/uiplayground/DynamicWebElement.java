@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class DynamicWebElement {
 
 	public static void main(String[] args) throws InterruptedException {
-
+		long start = System.currentTimeMillis();
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://uiplayground.techwithjatin.com/");
 		driver.manage().window().maximize();
@@ -55,7 +55,8 @@ public class DynamicWebElement {
 		By hiddenMessageLocator = By.xpath("//span[@data-testid='visibility-state']");
 		WebElement hiddenMessage = driver.findElement(hiddenMessageLocator);
 		System.out.println(hiddenMessage.getText());
-
+		long end = System.currentTimeMillis();
+		System.out.println("Duration" + (start - end) / 1000);
 	}
 
 }
