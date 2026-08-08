@@ -24,6 +24,7 @@ public class XpathAxisDemo {
 		By emailLocator=By.xpath("//input[@id=\"phone\"]/preceding-sibling::input[@id='email']");
 		WebElement email=wait.until(ExpectedConditions.visibilityOfElementLocated(emailLocator));
 		email.sendKeys("rajendra.m@gmail.com");
+		driver.quit();
 	}
 
 }
